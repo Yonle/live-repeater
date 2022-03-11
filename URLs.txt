@@ -1,0 +1,12 @@
+# This is a example of node-live-repeater URLs.txt
+
+# type: Type of livestream(playlist|raw|auto).
+# path: Server URL path to repeat.
+# url: URL of livestream to repeat.
+
+# Usually, A livestream that using playlist to work will converted into consumeable livestream.
+# Automatic type detection is usually done automatically by looking at it's URL extension.
+
+# [type] [path] [url] (description)
+auto /live1 https://www.example1.com/live.m3u8
+auto /live2 https://www.example2.com/live.m3u8

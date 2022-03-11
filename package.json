@@ -1,0 +1,27 @@
+{
+  "name": "live-repeater",
+  "version": "1.0.0",
+  "description": "A livestream repeater",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Yonle/live-repeater.git"
+  },
+  "keywords": [
+    "repeater"
+  ],
+  "author": "Yonle <yonle@duck.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Yonle/live-repeater/issues"
+  },
+  "homepage": "https://github.com/Yonle/live-repeater#readme",
+  "dependencies": {
+    "m3u8stream": "^0.8.6",
+    "miniget": "^4.2.2"
+  }
+}
