@@ -73,7 +73,7 @@ function playlistHandler(s, i) {
     if (res.headers["content-type"])
       repeater.setCT(res.headers["content-type"]);
   });
-  stream.on("close", (_) => {
+  stream.on("end", (_) => {
     console.log(`R${i+1}: RECONNECTING....`);
     playlistHandler(s, i);
   });
@@ -97,7 +97,7 @@ function rawHandler(s, i) {
     if (res.headers["content-type"])
       repeater.setCT(res.headers["content-type"]);
   });
-  stream.on("close", (_) => {
+  stream.on("end", (_) => {
     console.log(`R${i+1}: RECONNECTING....`);
     rawHandler(s, i);
   });
