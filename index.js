@@ -164,6 +164,7 @@ http
 	if (stream) {
     	if (stream.ct) res.setHeader("content-type", stream.ct);
     	if (stream.type === "raw" && stream.header) res.write(stream.header);
+    	if (req.method !== "GET") return stream.end();
     	stream.pipe(res);
     } else if (!stream && !process.env.NO_LIST && req.url.split("?")[0] === "/") {
     	res.setHeader("content-type", "text/plain");
