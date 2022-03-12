@@ -78,7 +78,10 @@ function playlistHandler(s, i) {
     playlistHandler(s, i);
   });
 
-  stream.on("error", (err) => console.error(`R${i+1}: ${err}`));
+  stream.on("error", (err) => {
+    console.error(`R${i+1}: ${err}`);
+    stream.end();
+  });
 }
 
 // rawHandler()
@@ -99,7 +102,10 @@ function rawHandler(s, i) {
     rawHandler(s, i);
   });
 
-  stream.on("error", (err) => console.error(`R${i+1}: ${err}`));
+  stream.on("error", (err) => {
+    console.error(`R${i+1}: ${err}`);
+    stream.end();
+  });
 }
 
 rp.checkType = function (t, s, i) {
