@@ -63,7 +63,7 @@ function getRepeater(i, t, d) {
 // playlistHandler()
 // Used for livestreamer that use playlist like m3u or dash mpd.
 function playlistHandler(s, i) {
-  let repeater = getRepeater(s[0], "playlist", s.slice(3).join(" "));
+  let repeater = getRepeater(s[0], "playlist", s.slice(2).join(" "));
   let stream = m3u8stream(s[1]);
 
   console.log(`R${i+1}: REPEATING....`);
@@ -87,7 +87,7 @@ function playlistHandler(s, i) {
 // rawHandler()
 // Different than playlistHandler(), used to rebroadcast the coming buffers.
 function rawHandler(s, i) {
-  let repeater = getRepeater(s[0], "raw", s.slice(3).join(" "));
+  let repeater = getRepeater(s[0], "raw", s.slice(2).join(" "));
   let stream = get(s[1]);
 
   console.log(`R${i+1}: REPEATING....`);
