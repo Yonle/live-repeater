@@ -161,7 +161,7 @@ http
     	stream.pipe(res);
     } else if (!stream && !process.env.NO_LIST && req.url.split("?")[0] === "/") {
     	res.setHeader("content-type", "text/plain");
-    	res.write("node-live-repeater - A livestream repeater\n");
+    	res.write("node-live-repeater - A livestream repeater - https://github.com/Yonle/live-repeater\n");
     	res.write(`This server is running node-live-repeater which is repeating ${streams.length} livestream right now\n`);
     	res.write("\nEndpoints:\n");
     	rp.forEach(({ d }, e) => {
